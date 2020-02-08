@@ -2,3 +2,5 @@ node_modules/
 .editorconfig
 .prettierrc
 .eslintrc.js
+temp/uploads/*
+
