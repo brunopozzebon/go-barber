@@ -3,4 +3,6 @@ node_modules/
 .prettierrc
 .eslintrc.js
 temp/uploads/*
+.env
+
 

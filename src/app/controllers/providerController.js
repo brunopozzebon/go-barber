@@ -13,7 +13,7 @@ class ProviderController {
       },
     });
 
-    res.json(providers);
+    return res.json(providers);
   }
 }
 

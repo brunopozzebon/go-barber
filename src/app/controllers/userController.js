@@ -59,7 +59,7 @@ class UserController {
     }
 
     const { id, name, provider } = await user.update(req.body);
-    return res.send({ id, name, email, provider });
+    return res.send({ id, name, provider });
   }
 }
 
