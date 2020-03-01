@@ -8,7 +8,6 @@ import routers from './routers';
 import sentryConfig from './config/sentry';
 import './database/index';
 
-
 class App {
   constructor() {
     this.server = express();
@@ -34,15 +33,12 @@ class App {
 
   handlerErros() {
     this.server.use(async (err, req, res, next) => {
-      if(process.env.NODE_ENV == 'development'){
+      if (process.env.NODE_ENV == 'development') {
         const youch = await new Youch(err, req).toJSON();
         return res.status(500).json(youch);
-      }else{
-        return res.status(500).json("error":"Internal server error");
       }
-      });
-
-
+      return res.status(500).json({ error: 'Internal server error' });
+    });
   }
 }
 
